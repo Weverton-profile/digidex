@@ -2,14 +2,13 @@ package br.com.digidex.model;
 
 public class DigEv {
 	
+	private Long id;
 	private String digimon;
 	private String condition;
-	private String image;
 	
-	public DigEv(String digimon, String condition, String image) {
+	public DigEv(String digimon, String condition) {
 		this.digimon = digimon;
 		this.condition = condition;
-		this.image = image;
 	}
 
 	public String getDigimon() {
@@ -20,8 +19,8 @@ public class DigEv {
 		return condition;
 	}
 
-	public String getImage() {
-		return image;
+	public Long getId() {
+		return id;
 	}
-	
+
 }

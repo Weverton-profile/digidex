@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{components :: head}"></head>
+<body>
+	<nav th:replace="~{components :: navigation}"></nav>
+	<div class="container mt-2">
+		<div class="row">
+			<div class="col-6 mr-2 border p-2 rounded">
+				<h5 class="text-center rounded" th:text="${digimon.getName()}" style="background-color: #FFA040;"></h5>
+				<div class="d-flex justify-content-center" th:each="images: ${digimon.getImages()}">
+					<img alt="" th:src="${images.getHref()}">
+				</div>
+				<!--  <span>Level</span> -->
+				<div class="d-flex justify-content-center" th:each="levels: ${digimon.getLevels()}" style="background-color: #FFE5A5;">
+					<span th:text="${levels.getLevel()}"></span>
+				</div>
+				<!--  <span>Type</span> -->
+				<div class="d-flex justify-content-center" th:each="types: ${digimon.getTypes()}" style="background-color: #FFE5A5;">
+					<span th:text="${types.getType()}"></span>
+				</div>
+				<!--  <span>Attributes</span> -->
+			    <div class="d-flex justify-content-center" th:each="attributes: ${digimon.getAttributes()}" style="background-color: #FFE5A5;">
+					<span th:text="${attributes.getAttribute()}"></span>
+				</div> 
+				<!-- <span th:if="${digimon.getFields().size()} > 0">Fields</span> -->
+			    <div th:if="${digimon.getFields().size()} > 0" class="d-flex justify-content-center" th:each="fields: ${digimon.getFields()}" style="background-color: #FFE5A5;">
+					<span th:text="${fields.getField()}"></span>
+				</div>
+			</div>
+			<span class="d-flex col-6 justify-content-center align-items-center" th:if="${digimon.getDescriptions().size()} > 0" th:text="${digimon.getDescriptions().get(0).getDescription()}"></span>
+		</div>
+		<div class="row">
+			<div class="col-6">
+				<div  th:each="priorEvolutions: ${digimon.getPriorEvolutions()}">
+					<a class="link-primary" th:if="${priorEvolutions.getId()} != null" th:href="${'digimon?name=' + priorEvolutions.getId()}" th:text="${priorEvolutions.getDigimon()}" style="text-decoration: none;"></a>
+					<span class="text-primary" th:if="${priorEvolutions.getId()} == null" th:text="${priorEvolutions.getDigimon()}"></span>
+					<span th:text="${priorEvolutions.getCondition()}"></span>
+				</div>
+			</div>
+			<div class="col-6">
+				<div th:each="nextEvolutions: ${digimon.getNextEvolutions()}">
+					<a class="link-primary" th:if="${nextEvolutions.getId()} != null" th:href="${'digimon?name=' + nextEvolutions.getId()}" th:text="${nextEvolutions.getDigimon()}" style="text-decoration: none;"></a>
+					<span class="text-primary" th:if="${nextEvolutions.getId()} == null" th:text="${nextEvolutions.getDigimon()}"></span>
+					<span th:text="${nextEvolutions.getCondition()}"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

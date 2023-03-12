@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{components :: head}"></head>
+<body>
+	<nav th:replace="~{components :: navigation}"></nav>
+    <div th:if="${message}" th:text="${message}" th:class="${'alert ' + alertClass}"></div>
+    <form action="/digimon" method="get">
+        <input type="text" name="name" placeholder="Digimon Name"/>
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>

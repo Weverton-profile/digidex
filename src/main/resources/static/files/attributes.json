@@ -1,0 +1,19 @@
+{
+	"attributes": [
+		{
+			"name": "Vaccine",
+			"symbol": "https://dmowiki.com/images/7/76/VA1.png",
+			"description": "They are created to prevent the destruction of important Data by Virus Digimon. They have a strong attack instinct against Virus Species, so they act combating the Virus Species and thus protecting the surrounding environment and its own territory. As a rule, Vaccine Digimon are usually good, put a high emphasis on justice and morals, and fight against evil."
+		},
+		{
+			"name": "Data",
+			"symbol": "https://dmowiki.com/images/d/dc/DA1.png",
+			"description": "They are like the e-mails that are sent using computers. They do not belong to either 'Vaccines' or 'Virus', but they need 'Vaccines' to protect themselves from 'Virus'. They just exist according to the already established environment and don't do much to change it. Data Digimon can be good or evil, but generally value peace above all."
+		},
+		{
+			"name": "Virus",
+			"symbol": "https://dmowiki.com/images/d/dc/VI1.png",
+			"description": "They are Digimon that devour data, recognized as evil Digimon that destroy data from computers. Virus species seek to modify the surrounding environment according to their wishes. As a result, anomalies end up appearing in the system. Virus Digimon desire power, and can often become greedy, selfish, wild, or evil in pursuit of it."
+		}
+	]
+}

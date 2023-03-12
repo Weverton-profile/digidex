@@ -1,0 +1,49 @@
+{
+	"fields": [
+		{
+			"name": "Nature Spirits",
+			"symbol": "https://static.tvtropes.org/pmwiki/pub/images/nature_spirits.png",
+			"description": "Generic monsters and beasts. Also represents grasslands and canyons."
+		},
+		{
+			"name": "Deep Savers",
+			"symbol": "https://static.tvtropes.org/pmwiki/pub/images/deep_savers_0.png",
+			"description": "Aquatic or ice-related Digimon. Can represent the ocean or arctic."
+		},
+		{
+			"name": "Nightmare Soldiers",
+			"symbol": "https://static.tvtropes.org/pmwiki/pub/images/nightmare_soldiers.png",
+			"description": "Darkness or spirit based Digimon, or Digimon based on traditional 'Halloween' monsters like vampires, werewolves, or Japanese youkai and demons. Can represent haunted or cursed areas."
+		},
+		{
+			"name": "Wind Guardians",
+			"symbol": "https://static.tvtropes.org/pmwiki/pub/images/wind_guardians.png",
+			"description": "Flying, air, or plant based Digimon. Can represent forests and the sky."
+		},
+		{
+			"name": "Metal Empire",
+			"symbol": "https://static.tvtropes.org/pmwiki/pub/images/metal_empire.png",
+			"description": "Machine, cyborg, or other mechanical Digimon. Can represent cities and factories."
+		},
+		{
+			"name": "Dark Area",
+			"symbol": "https://static.tvtropes.org/pmwiki/pub/images/nightmare_soldiers.png",
+			"description": "Villainous, demonic, terrifying, evil Digimon. Can represent the Dark Area of the Digital World."
+		},
+		{
+			"name": "Virus Busterss",
+			"symbol": "https://static.tvtropes.org/pmwiki/pub/images/virus_busters.png",
+			"description": "Heroic or angelic Digimon, often includes main characters from the anime or manga. Can represent the sky or heavens."
+		},
+		{
+			"name": "Dragon's Roa",
+			"symbol": "https://static.tvtropes.org/pmwiki/pub/images/dragons_roar_5.png",
+			"description": "Draconic, reptile, or fire-related Digimon."
+		},
+		{
+			"name": "Jungle Troopers",
+			"symbol": "https://static.tvtropes.org/pmwiki/pub/images/jungle_troopers_6.png",
+			"description": "Plant or Insect based Digimon."
+		}
+	]
+}

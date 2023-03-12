@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{components :: head}"></head>
+<body>
+	<nav th:replace="~{components :: navigation}"></nav>
+	<div class="container mt-3">
+	</div>
+	<script type="text/javascript">
+		let divUsuarios = document.querySelector(".container")
+		fetch("files/levels.json").then(
+			(response) => {
+				response.json().then((dados) => {
+					dados.levels.map((level) => {
+						divUsuarios.innerHTML += `
+							<div class="mb-3">
+							  	<div class="row g-0">
+							    	<div class="col-md-4 d-flex justify-content-center">
+							      		<img src="${level.img}" class="img-fluid rounded-start" alt="...">
+							    	</div>
+							    	<div class="col-md-8">
+										<h5 class="card-title">${level.name}</h5>
+							        	<p class="card-text">${level.description}</p>
+							    	</div>
+							  	</div>
+							</div>`
+					})
+			})
+		})
+	</script>
+</body>
+</html>

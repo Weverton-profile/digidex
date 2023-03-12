@@ -6,13 +6,12 @@ public class Digimon {
 
 	private Long id;
 	private String name;
-	private boolean xAntibody;
 	private List<Images> images;
 	private List<Levels> levels;
 	private List<Types> types;
 	private List<Attributes> attributes;
 	private List<Fields> fields;
-	private List<Skills> skills;
+	private List<Descriptions> descriptions;
 	private List<DigEv> priorEvolutions;
 	private List<DigEv> nextEvolutions;
 	
@@ -23,10 +22,6 @@ public class Digimon {
 	
 	public String getName() {
 		return name;
-	}
-	
-	public boolean isxAntibody() {
-		return xAntibody;
 	}
 	
 	public List<Images> getImages() {
@@ -48,18 +43,17 @@ public class Digimon {
 	public List<Fields> getFields() {
 		return fields;
 	}
-	
-	
-	public List<Skills> getSkills() {
-		return skills;
-	}
-	
+
 	public List<DigEv> getPriorEvolutions() {
 		return priorEvolutions;
 	}
 	
 	public List<DigEv> getNextEvolutions() {
 		return nextEvolutions;
+	}
+
+	public List<Descriptions> getDescriptions() {
+		return descriptions;
 	}
 	
 }
