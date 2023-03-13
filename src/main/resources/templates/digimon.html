@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{components :: head}"></head>
+<head th:replace="~{components :: head(${'- ' + digimon.getName()})}"></head>
 <body>
 	<nav th:replace="~{components :: navigation}"></nav>
 	<div class="container mt-2">
