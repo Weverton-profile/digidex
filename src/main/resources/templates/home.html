@@ -3,10 +3,15 @@
 <head th:replace="~{components :: head('')}"></head>
 <body>
 	<nav th:replace="~{components :: navigation}"></nav>
-    <form action="/digimon" method="get">
-        <input type="text" name="name" placeholder="Digimon Name"/>
-        <div class="text-danger" th:text="${message}"></div>
-        <button type="submit">Search</button>
-    </form>
+	<div class="container">
+		<div class="d-flex row justify-content-center mt-3">
+			<img class="col-12" alt="" src="images/logo.png">
+		    <form class="row d-flex justify-content-center mt-3" action="/digimon" method="get">
+		        <input class="col-8 me-2 rounded" type="text" name="name" placeholder="Digimon Name"/>
+		        <button class="col-3 btn btn-success" type="submit">Search</button>
+		        <div class="text-danger d-flex justify-content-center" th:text="${message}"></div>
+		    </form>
+	    </div>
+	</div>
 </body>
 </html>
