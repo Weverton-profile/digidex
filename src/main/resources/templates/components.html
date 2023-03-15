@@ -7,6 +7,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0">
 	<title th:text="${'DigiDex ' + value}"></title>
 	<style type="text/css">
 		@font-face {
@@ -14,8 +15,28 @@
 			src: url("files/font/DigitaldreamFat.ttf");
 		}
 		
+		body {
+			background-image: url("images/background.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		
 		li a, .btn, input {
 			font-family: myFont;
+		}
+		
+		@media only screen and (max-width: 1200px) {
+			body {
+		  		background-image: url("images/background-3.png");
+		  		background-position: inherit;
+		  	}
+		}
+		
+		@media only screen and (max-width: 807px) {
+			body {
+		  		background-image: url("images/background-2.png");
+		  	}
 		}
 	</style>
 </head>

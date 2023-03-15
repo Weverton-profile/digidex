@@ -13,11 +13,11 @@
 					dados.levels.map((level) => {
 						divUsuarios.innerHTML += `
 							<div class="mb-3">
-							  	<div class="row g-0">
+							  	<div class="row g-0 p-2 border border-2 rounded" style="background-color: #fff;">
 							    	<div class="col-md-4 d-flex justify-content-center">
 							      		<img src="${level.img}" class="img-fluid rounded-start" alt="...">
 							    	</div>
-							    	<div class="col-md-8">
+							    	<div class="col-md-8 d-flex flex-column justify-content-center align-items-center">
 										<h5 class="card-title">${level.name}</h5>
 							        	<p class="card-text">${level.description}</p>
 							    	</div>

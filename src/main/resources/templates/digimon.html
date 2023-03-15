@@ -3,44 +3,71 @@
 <head th:replace="~{components :: head(${'- ' + digimon.getName()})}"></head>
 <body>
 	<nav th:replace="~{components :: navigation}"></nav>
-	<div class="container mt-2">
+	<div class="container">
 		<div class="row">
-			<div class="col-6 mr-2 border p-2 rounded">
-				<h5 class="text-center rounded" th:text="${digimon.getName()}" style="background-color: #FFA040;"></h5>
+			<div class="col-md-6 col-12 mr-2 border border-2 p-2 mt-2 rounded" style="background-color: #fff;">
+				<h5 class="text-center text-light rounded" th:text="${digimon.getName()}" style="background-color: rgba(15, 21, 37, 255);"></h5>
 				<div class="d-flex justify-content-center" th:each="images: ${digimon.getImages()}">
 					<img alt="" th:src="${images.getHref()}">
 				</div>
-				<!--  <span>Level</span> -->
-				<div class="d-flex justify-content-center" th:each="levels: ${digimon.getLevels()}" style="background-color: #FFE5A5;">
-					<span th:text="${levels.getLevel()}"></span>
-				</div>
-				<!--  <span>Type</span> -->
-				<div class="d-flex justify-content-center" th:each="types: ${digimon.getTypes()}" style="background-color: #FFE5A5;">
-					<span th:text="${types.getType()}"></span>
-				</div>
-				<!--  <span>Attributes</span> -->
-			    <div class="d-flex justify-content-center" th:each="attributes: ${digimon.getAttributes()}" style="background-color: #FFE5A5;">
-					<span th:text="${attributes.getAttribute()}"></span>
-				</div> 
-				<!-- <span th:if="${digimon.getFields().size()} > 0">Fields</span> -->
-			    <div th:if="${digimon.getFields().size()} > 0" class="d-flex justify-content-center" th:each="fields: ${digimon.getFields()}" style="background-color: #FFE5A5;">
-					<span th:text="${fields.getField()}"></span>
-				</div>
+				<table class="col-12">
+					<tbody>
+						<tr>
+							<td class="border-bottom border-end rounded-top" style="background-color: rgba(15, 21, 37, 255); color: #fff; text-align: center;">Level</td>
+							<td class="border-bottom rounded-top" style="background-color: rgba(27, 46, 88, 255);">
+								<div class="d-flex text-light justify-content-center" th:each="levels: ${digimon.getLevels()}">
+									<span th:text="${levels.getLevel()}"></span>
+								</div>							
+							</td>
+						</tr>
+						<tr>
+							<td class="border-bottom border-end" style="background-color: rgba(15, 21, 37, 255); color: #fff; text-align: center;">Type</td>
+							<td class="border-bottom" style="background-color: rgba(27, 46, 88, 255);">
+								<div class="d-flex text-light justify-content-center" th:each="types: ${digimon.getTypes()}">
+									<span th:text="${types.getType()}"></span>
+								</div>							
+							</td>
+						</tr>
+						<tr>
+							<td class="border-bottom border-end" style="background-color: rgba(15, 21, 37, 255); color: #fff; text-align: center;">Attributes</td>
+							<td class="border-bottom" style="background-color: rgba(27, 46, 88, 255);">
+							    <div class="d-flex text-light justify-content-center" th:each="attributes: ${digimon.getAttributes()}">
+									<span th:text="${attributes.getAttribute()}"></span>
+								</div> 							
+							</td>
+						</tr>
+						<tr>
+							<td class="border-end rounded-bottom" style="background-color: rgba(15, 21, 37, 255); color: #fff; text-align: center;">Fields</td>
+							<td class="rounded-bottom" style="background-color: rgba(27, 46, 88, 255);">
+							    <div th:if="${digimon.getFields().size()} > 0" class="d-flex text-light justify-content-center" th:each="fields: ${digimon.getFields()}">
+									<span th:text="${fields.getField()}"></span>
+								</div>							
+							</td>						
+						</tr>
+					</tbody>
+				</table>
 			</div>
-			<span class="d-flex col-6 justify-content-center align-items-center" th:if="${digimon.getDescriptions().size()} > 0" th:text="${digimon.getDescriptions().get(0).getDescription()}"></span>
+			<div class="d-flex flex-column col-md-6 col-12 justify-content-center align-items-center text-light">
+				<h4 th:if="${digimon.getDescriptions().size()} > 0">Description</h4>
+				<span class="mt-2 " th:if="${digimon.getDescriptions().size()} > 0" th:text="${digimon.getDescriptions().get(0).getDescription()}"></span>
+			</div>
 		</div>
-		<div class="row">
-			<div class="col-6">
+		<div class="row mb-2 justify-content-center">
+			<div class="col-md-5 col-12 p-2 m-2 border border-2 rounded" style="background-color: #fff;">
+				<h4 style="text-align: center; color: rgba(15, 21, 37, 255);">Pre Evolutions</h4>
 				<div  th:each="priorEvolutions: ${digimon.getPriorEvolutions()}">
 					<a class="link-primary" th:if="${priorEvolutions.getId()} != null" th:href="${'digimon?name=' + priorEvolutions.getId()}" th:text="${priorEvolutions.getDigimon()}" style="text-decoration: none;"></a>
 					<span class="text-primary" th:if="${priorEvolutions.getId()} == null" th:text="${priorEvolutions.getDigimon()}"></span>
+					<span th:if="${priorEvolutions.getCondition()} != ''" style="font-weight: bold;">- Condition:</span>
 					<span th:text="${priorEvolutions.getCondition()}"></span>
 				</div>
 			</div>
-			<div class="col-6">
+			<div class="col-md-5 p-2 col-12 m-2 border border-2 rounded" style="background-color: #fff;">
+				<h4 style="text-align: center; color: rgba(15, 21, 37, 255);">Next Evolutions</h4>
 				<div th:each="nextEvolutions: ${digimon.getNextEvolutions()}">
 					<a class="link-primary" th:if="${nextEvolutions.getId()} != null" th:href="${'digimon?name=' + nextEvolutions.getId()}" th:text="${nextEvolutions.getDigimon()}" style="text-decoration: none;"></a>
 					<span class="text-primary" th:if="${nextEvolutions.getId()} == null" th:text="${nextEvolutions.getDigimon()}"></span>
+					<span th:if="${nextEvolutions.getCondition()} != ''" style="font-weight: bold;">- Condition:</span>
 					<span th:text="${nextEvolutions.getCondition()}"></span>
 				</div>
 			</div>
