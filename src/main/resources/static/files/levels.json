@@ -3,47 +3,56 @@
 		{
 			"name": "Baby I",
 			"description": "The Evolution Stage that a Digimon normally has immediately after hatching from a Digitama. At this level, a Digimon's composition data is unstable, so it is very weak.",
-			"img": "https://digimon-api.com/images/digimon/w/Dodomon.png"
+			"img": "https://digimon-api.com/images/digimon/w/Dodomon.png",
+			"href": "/digimon?name=273"
 		},
 		{
 			"name": "Baby II",
 			"description": "The Baby I Digimon evolves into this Evolution Stage shortly into its lifespan. While its compositional data has stabilized, it is still largely unable to fight.",
-			"img": "https://digimon-api.com/images/digimon/w/Dorimon.png"
+			"img": "https://digimon-api.com/images/digimon/w/Dorimon.png",
+			"href": "/digimon?name=428"
 		},
 		{
 			"name": "Child",
 			"description": "The Digimon's intellect has developed, and it has become able to fight. The course of its future evolution can vary drastically depending on how it is raised at this Evolution Stage.",
-			"img": "https://digimon-api.com/images/digimon/w/DORUmon.png"
+			"img": "https://digimon-api.com/images/digimon/w/DORUmon.png",
+			"href": "/digimon?name=dorumon"
 		},
 		{
 			"name": "Adult",
 			"description": "The Evolution Stage at which a Digimon is considered to be fully grown. This is the highest Evolution Stage that the majority of Digimon ever attain.",
-			"img": "https://digimon-api.com/images/digimon/w/DORUgamon.png"
+			"img": "https://digimon-api.com/images/digimon/w/DORUgamon.png",
+			"href": "/digimon?name=269"
 		},
 		{
 			"name": "Perfect",
 			"description": "The strongest Adult Digimon evolve to this Evolution Stage. In the wild, Perfect Digimon typically take on the role of pack leaders.",
-			"img": "https://digimon-api.com/images/digimon/w/DORUguremon.png"
+			"img": "https://digimon-api.com/images/digimon/w/DORUguremon.png",
+			"href": "/digimon?name=1374"
 		},
 		{
 			"name": "Ultimate/Mega",
 			"description": "A rare Evolution Stage that only a small minority of veteran Perfect Digimon ever attain. Due to their sheer power, they tend to act alone.",
-			"img": "https://digimon-api.com/images/digimon/w/Alphamon.png"
+			"img": "https://digimon-api.com/images/digimon/w/Alphamon.png",
+			"href": "/digimon?name=1334"
 		},
 		{
 			"name": "Super Ultimate",
 			"description": "A title given to certain exceptional species of Ultimate Digimon that have surpassed the typical Ultimate power level. In the franchise overall, there is no canonical Evolution Stage above Ultimate and 'Super Ultimate' is considered to be only a title, but some Digimon materials still feature a seventh Evolution Stage, usually called 'Super Ultimate'.",
-			"img": "https://digimon-api.com/images/digimon/w/Alphamon(Ouryuken).png"
+			"img": "https://digimon-api.com/images/digimon/w/Alphamon(Ouryuken).png",
+			"href": "/digimon?name=560"
 		},
 		{
 			"name": "Armor",
 			"description": "The Evolution Stage designation of Digimon who have used a Digimental to undergo Armor Evolution. Relative power levels of Armor Digimon vary, depending on the affinity between a Digimental and the Digimon who used it.",
-			"img": "https://digimon-api.com/images/digimon/w/Bryweludramon.png"
+			"img": "https://digimon-api.com/images/digimon/w/Bryweludramon.png",
+			"href": "/digimon?name=307"
 		},
 		{
 			"name": "Hybrid",
 			"description": "The Evolution Stage designation of Digimon created using a Legendary Spirit. Hybrids are divided into five sub-categories called Forms, whose respective power levels are loosely equivalent to particular natural Evolution Stages.",
-			"img": "https://digimon-api.com/images/digimon/w/Aldamon.png"
+			"img": "https://digimon-api.com/images/digimon/w/Aldamon.png",
+			"href": "/digimon?name=372"
 		}
 	]
 }
