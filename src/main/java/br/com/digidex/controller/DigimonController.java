@@ -5,7 +5,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import br.com.digidex.model.Digimon;
 import br.com.digidex.service.DigimonService;
 
@@ -35,5 +34,4 @@ public class DigimonController {
 		model.addAttribute("digimon", digimon);
 		return "digimon";
 	}
-	
 }
